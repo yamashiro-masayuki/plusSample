@@ -39,6 +39,8 @@
             getAddErrorMsg = "氏名に記述がありません。"
         ElseIf i = 6 Then
             getAddErrorMsg = "生年月日に記述がありません。"
+        ElseIf i = 7 Then
+            getAddErrorMsg = "数字で入力してください"
         Else
             getAddErrorMsg = ""
         End If
