@@ -25,7 +25,7 @@
         lbl_checkError.Visible = False
         'IDかパスに記述がない時エラーメッセージを表示して処理を終了する。
         If txt_ID.Text = "" Or txt_Pass.Text = "" Then
-            lbl_checkError.Text = common.getErrorMsg(1)
+            lbl_checkError.Text = common.getLoginErrorMsg(1)
             lbl_checkError.Visible = True
             Return
         End If
@@ -35,7 +35,7 @@
         'データをとってこれた時名前が入っていたら画面を表示する。
         If common.fullName = "" Then
             '検索にヒットしないエラーの記述。
-            lbl_checkError.Text = common.getErrorMsg(2)
+            lbl_checkError.Text = common.getLoginErrorMsg(2)
             lbl_checkError.Visible = True
         Else
             'メイン画面の表示

@@ -248,6 +248,15 @@ Partial Public Class webAddCus
     Protected WithEvents txt_Address2 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''lbl_ErrorCheck コントロール。
+    '''</summary>
+    '''<remarks>
+    '''自動生成されたフィールド。
+    '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+    '''</remarks>
+    Protected WithEvents lbl_ErrorCheck As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''btn_Touroku コントロール。
     '''</summary>
     '''<remarks>

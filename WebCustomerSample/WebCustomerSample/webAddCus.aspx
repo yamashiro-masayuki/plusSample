@@ -15,7 +15,7 @@
             <p style="font-family: 'MS UI Gothic', 'ＭＳ Ｐゴシック', sans-serif; font-size: medium; width: 613px; margin-top: 0px;">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 　※青文字は必須項目</p>
         </asp:Panel>
-        <asp:Panel ID="Panel2" runat="server" Height="218px">
+        <asp:Panel ID="Panel2" runat="server" Height="264px">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Label ID="lbl_ID" runat="server" Text="ID"></asp:Label>
@@ -65,15 +65,15 @@
             <asp:TextBox ID="txt_Address2" runat="server" MaxLength="30" Width="376px"></asp:TextBox>
             <br />
             <br />
+            　　<asp:Label ID="lbl_ErrorCheck" runat="server" Text="エラーチェック"></asp:Label>
+            <br />
+            <br />
             <br />
             <br />
             <br />
             <br />
             <br />
         </asp:Panel>
-        <p style="margin-left: 360px">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </p>
         <p style="margin-left: 360px">
             <asp:Button ID="btn_Touroku" runat="server" Height="40px" Text="登録" Width="110px" />
         </p>

@@ -101,6 +101,9 @@
     <Content Include="webUpCus.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addCusClass.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="commonCusData.vb" />
     <Compile Include="LoginClass.vb">
       <SubType>ASPXCodeBehind</SubType>
