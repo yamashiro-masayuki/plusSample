@@ -21,7 +21,6 @@ Public Class webAddCus
         txt_Address2.Text = ""
         txt_ID.Focus()
 
-
     End Sub
 
     '画面が開かれた際に文字色を変更しエラーを隠す。

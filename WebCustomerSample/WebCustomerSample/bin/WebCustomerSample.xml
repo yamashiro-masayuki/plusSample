@@ -973,9 +973,9 @@ lbl_Name コントロール。
 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
 </remarks>
 </member>
-<member name="F:WebCustomerSample.webUpCus._txt_Name0">
+<member name="F:WebCustomerSample.webUpCus._txt_Name">
 <summary>
-txt_Name0 コントロール。
+txt_Name コントロール。
 </summary>
 <remarks>
 自動生成されたフィールド。
@@ -991,9 +991,9 @@ lbl_Sex コントロール。
 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
 </remarks>
 </member>
-<member name="F:WebCustomerSample.webUpCus._ddl_Sex0">
+<member name="F:WebCustomerSample.webUpCus._ddl_Sex">
 <summary>
-ddl_Sex0 コントロール。
+ddl_Sex コントロール。
 </summary>
 <remarks>
 自動生成されたフィールド。
@@ -1009,9 +1009,9 @@ lbl_BirthDay コントロール。
 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
 </remarks>
 </member>
-<member name="F:WebCustomerSample.webUpCus._txt_BYear0">
+<member name="F:WebCustomerSample.webUpCus._txt_BYear">
 <summary>
-txt_BYear0 コントロール。
+txt_BYear コントロール。
 </summary>
 <remarks>
 自動生成されたフィールド。
@@ -1027,9 +1027,9 @@ lbl_BYear0 コントロール。
 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
 </remarks>
 </member>
-<member name="F:WebCustomerSample.webUpCus._txt_BMonth0">
+<member name="F:WebCustomerSample.webUpCus._txt_BMonth">
 <summary>
-txt_BMonth0 コントロール。
+txt_BMonth コントロール。
 </summary>
 <remarks>
 自動生成されたフィールド。
@@ -1045,9 +1045,9 @@ lbl_BMonth0 コントロール。
 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
 </remarks>
 </member>
-<member name="F:WebCustomerSample.webUpCus._txt_BDay0">
+<member name="F:WebCustomerSample.webUpCus._txt_BDay">
 <summary>
-txt_BDay0 コントロール。
+txt_BDay コントロール。
 </summary>
 <remarks>
 自動生成されたフィールド。
@@ -1072,9 +1072,9 @@ lbl_PosAddres2 コントロール。
 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
 </remarks>
 </member>
-<member name="F:WebCustomerSample.webUpCus._txt_PosAddres0">
+<member name="F:WebCustomerSample.webUpCus._txt_PosAddres">
 <summary>
-txt_PosAddres0 コントロール。
+txt_PosAddres コントロール。
 </summary>
 <remarks>
 自動生成されたフィールド。
@@ -1099,18 +1099,18 @@ lbl_PosAddres4 コントロール。
 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
 </remarks>
 </member>
-<member name="F:WebCustomerSample.webUpCus._txt_Address3">
+<member name="F:WebCustomerSample.webUpCus._txt_Address1">
 <summary>
-txt_Address3 コントロール。
+txt_Address1 コントロール。
 </summary>
 <remarks>
 自動生成されたフィールド。
 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
 </remarks>
 </member>
-<member name="F:WebCustomerSample.webUpCus._txt_Address4">
+<member name="F:WebCustomerSample.webUpCus._txt_Address2">
 <summary>
-txt_Address4 コントロール。
+txt_Address2 コントロール。
 </summary>
 <remarks>
 自動生成されたフィールド。
@@ -1165,6 +1165,15 @@ lbl_changePassCheck コントロール。
 <member name="F:WebCustomerSample.webUpCus._txt_changePassCheck">
 <summary>
 txt_changePassCheck コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebCustomerSample.webUpCus._lbl_ErrorCheck">
+<summary>
+lbl_ErrorCheck コントロール。
 </summary>
 <remarks>
 自動生成されたフィールド。

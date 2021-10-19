@@ -86,13 +86,13 @@ Partial Public Class webUpCus
     Protected WithEvents lbl_Name As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''txt_Name0 コントロール。
+    '''txt_Name コントロール。
     '''</summary>
     '''<remarks>
     '''自動生成されたフィールド。
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
-    Protected WithEvents txt_Name0 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_Name As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''lbl_Sex コントロール。
@@ -104,13 +104,13 @@ Partial Public Class webUpCus
     Protected WithEvents lbl_Sex As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''ddl_Sex0 コントロール。
+    '''ddl_Sex コントロール。
     '''</summary>
     '''<remarks>
     '''自動生成されたフィールド。
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
-    Protected WithEvents ddl_Sex0 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents ddl_Sex As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''lbl_BirthDay コントロール。
@@ -122,13 +122,13 @@ Partial Public Class webUpCus
     Protected WithEvents lbl_BirthDay As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''txt_BYear0 コントロール。
+    '''txt_BYear コントロール。
     '''</summary>
     '''<remarks>
     '''自動生成されたフィールド。
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
-    Protected WithEvents txt_BYear0 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_BYear As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''lbl_BYear0 コントロール。
@@ -140,13 +140,13 @@ Partial Public Class webUpCus
     Protected WithEvents lbl_BYear0 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''txt_BMonth0 コントロール。
+    '''txt_BMonth コントロール。
     '''</summary>
     '''<remarks>
     '''自動生成されたフィールド。
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
-    Protected WithEvents txt_BMonth0 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_BMonth As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''lbl_BMonth0 コントロール。
@@ -158,13 +158,13 @@ Partial Public Class webUpCus
     Protected WithEvents lbl_BMonth0 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''txt_BDay0 コントロール。
+    '''txt_BDay コントロール。
     '''</summary>
     '''<remarks>
     '''自動生成されたフィールド。
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
-    Protected WithEvents txt_BDay0 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_BDay As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''lbl_BDay0 コントロール。
@@ -185,13 +185,13 @@ Partial Public Class webUpCus
     Protected WithEvents lbl_PosAddres2 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''txt_PosAddres0 コントロール。
+    '''txt_PosAddres コントロール。
     '''</summary>
     '''<remarks>
     '''自動生成されたフィールド。
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
-    Protected WithEvents txt_PosAddres0 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_PosAddres As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''lbl_PosAddres3 コントロール。
@@ -212,22 +212,22 @@ Partial Public Class webUpCus
     Protected WithEvents lbl_PosAddres4 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''txt_Address3 コントロール。
+    '''txt_Address1 コントロール。
     '''</summary>
     '''<remarks>
     '''自動生成されたフィールド。
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
-    Protected WithEvents txt_Address3 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_Address1 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''txt_Address4 コントロール。
+    '''txt_Address2 コントロール。
     '''</summary>
     '''<remarks>
     '''自動生成されたフィールド。
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
-    Protected WithEvents txt_Address4 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_Address2 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Panel2 コントロール。
@@ -282,6 +282,15 @@ Partial Public Class webUpCus
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
     Protected WithEvents txt_changePassCheck As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''lbl_ErrorCheck コントロール。
+    '''</summary>
+    '''<remarks>
+    '''自動生成されたフィールド。
+    '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+    '''</remarks>
+    Protected WithEvents lbl_ErrorCheck As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''btn_ClearButton コントロール。

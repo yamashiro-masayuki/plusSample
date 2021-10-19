@@ -26,10 +26,10 @@
                 <br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="lbl_Name" runat="server" Text="氏名"></asp:Label>
                     &nbsp;
-                    <asp:TextBox ID="txt_Name0" runat="server" MaxLength="10"></asp:TextBox>
+                    <asp:TextBox ID="txt_Name" runat="server" MaxLength="10"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;
                     <asp:Label ID="lbl_Sex" runat="server" Text="性別"></asp:Label>
-                    <asp:DropDownList ID="ddl_Sex0" runat="server">
+                    <asp:DropDownList ID="ddl_Sex" runat="server">
                         <asp:ListItem>男性</asp:ListItem>
                         <asp:ListItem>女性</asp:ListItem>
                         <asp:ListItem>その他</asp:ListItem>
@@ -38,26 +38,26 @@
                     &nbsp;&nbsp;&nbsp;
                     <asp:Label ID="lbl_BirthDay" runat="server" Text="生年月日"></asp:Label>
                     &nbsp;
-                    <asp:TextBox ID="txt_BYear0" runat="server" MaxLength="4" Width="50px"></asp:TextBox>
+                    <asp:TextBox ID="txt_BYear" runat="server" MaxLength="4" Width="50px"></asp:TextBox>
                     <asp:Label ID="lbl_BYear0" runat="server" Text="年"></asp:Label>
-                    <asp:TextBox ID="txt_BMonth0" runat="server" MaxLength="2" Width="25px"></asp:TextBox>
+                    <asp:TextBox ID="txt_BMonth" runat="server" MaxLength="2" Width="25px"></asp:TextBox>
                     <asp:Label ID="lbl_BMonth0" runat="server" Text="月"></asp:Label>
-                    <asp:TextBox ID="txt_BDay0" runat="server" MaxLength="2" Width="25px"></asp:TextBox>
+                    <asp:TextBox ID="txt_BDay" runat="server" MaxLength="2" Width="25px"></asp:TextBox>
                     <asp:Label ID="lbl_BDay0" runat="server" Text="日"></asp:Label>
                 <br />
                     &nbsp;&nbsp;&nbsp;
                     <asp:Label ID="lbl_PosAddres2" runat="server" Text="郵便番号"></asp:Label>
                     &nbsp;
-                    <asp:TextBox ID="txt_PosAddres0" runat="server" MaxLength="8" Width="84px"></asp:TextBox>
+                    <asp:TextBox ID="txt_PosAddres" runat="server" MaxLength="8" Width="84px"></asp:TextBox>
                     &nbsp;&nbsp;
                     <asp:Label ID="lbl_PosAddres3" runat="server" Text="※「000-0000」のように「-」を書いてください"></asp:Label>
                 <br />
                     　　 　<asp:Label ID="lbl_PosAddres4" runat="server" Text="住所"></asp:Label>
                     &nbsp;
-                    <asp:TextBox ID="txt_Address3" runat="server" MaxLength="30" Width="376px"></asp:TextBox>
+                    <asp:TextBox ID="txt_Address1" runat="server" MaxLength="30" Width="376px"></asp:TextBox>
                 <br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="txt_Address4" runat="server" MaxLength="30" Width="376px"></asp:TextBox>
+                    <asp:TextBox ID="txt_Address2" runat="server" MaxLength="30" Width="376px"></asp:TextBox>
                 <br />
                     &nbsp;<asp:Panel ID="Panel2" runat="server" BorderStyle="Solid" Height="84px" style="margin-left: 20px; margin-top: 0px" Width="447px">
                         　<asp:CheckBox ID="chb_PassCheck" runat="server" Text="パスワード変更" />
@@ -71,6 +71,8 @@
                         <asp:TextBox ID="txt_changePassCheck" runat="server" MaxLength="6"></asp:TextBox>
                     </asp:Panel>
                     　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<br /> 
+                 
+                    <asp:Label ID="lbl_ErrorCheck" runat="server" Text="エラーチェック"></asp:Label>
                 <br />
                 <br />
                 <br />

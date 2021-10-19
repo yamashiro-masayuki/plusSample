@@ -1,0 +1,15 @@
+CREATE TABLE maCus(
+NUMBER int IDENTITY(1,1),
+ID varchar(6) not NULL,
+PASS varchar(10) not NULL,
+FULLNAME varchar(10) not NULL,
+SEX varchar(6) not NULL,
+BDYEAR int not NULL,
+BDMONTH int not NULL,
+BDDAY int not NULL,
+POSADDRESS varchar(8) ,
+ADDRESS1 varchar(30) ,
+ADDRESS2 varchar(30) 
+
+primary key(ID)
+);
