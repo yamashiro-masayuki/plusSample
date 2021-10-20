@@ -64,8 +64,9 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txt_Address2" runat="server" MaxLength="30" Width="376px"></asp:TextBox>
             <br />
-            <br />
             　　<asp:Label ID="lbl_ErrorCheck" runat="server" Text="エラーチェック"></asp:Label>
+            <br />
+            <br />
             <br />
             <br />
             <br />
@@ -75,7 +76,7 @@
             <br />
         </asp:Panel>
         <p style="margin-left: 360px">
-            <asp:Button ID="btn_Touroku" runat="server" Height="40px" Text="登録" Width="110px" />
+            &nbsp;<asp:Button ID="btn_Touroku" runat="server" Height="40px" Text="登録" Width="110px" />
         </p>
     </form>
 </body>

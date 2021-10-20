@@ -1,4 +1,6 @@
-﻿Public Class commonCusData
+﻿Imports System.Data.SqlClient
+Imports System.Data
+Public Class commonCusData
 
 
 #Region "共通変数"
@@ -62,6 +64,48 @@
 
     End Sub
 
+
+
+#End Region
+
+#Region "共通で使用SQL"
+
+    'IDとPassに当てはまるデータを取ってくるSQL
+    Function GetData(common As commonCusData, id As String, pass As String) As Integer
+        Dim con As String = "Data Source=DESKTOP-CF5KSJ9;Initial Catalog=sampleDDB;Integrated Security=SSPI;"
+        Dim Sql As String = $"SELECT * FROM maCus where ID = '{id}' and PASS = '{pass}' "
+
+        Try
+            Using Conn As New SqlConnection
+                Conn.ConnectionString = (con)
+                Conn.Open()
+                Using cmd As New SqlCommand(Sql)
+                    cmd.Connection = Conn
+                    cmd.CommandType = CommandType.Text
+                    Using reader As SqlDataReader = cmd.ExecuteReader()
+                        While (reader.Read())
+                            common.cusID = reader.GetString(1)
+                            common.cusPass = reader.GetString(2)
+                            common.fullName = reader.GetString(3)
+                            common.sex = reader.GetString(4)
+                            common.BDYear = reader.GetInt32(5)
+                            common.BDMonth = reader.GetInt32(6)
+                            common.BDDay = reader.GetInt32(7)
+                            common.posAdress = reader.GetString(8)
+                            common.address1 = reader.GetString(9)
+                            common.address2 = reader.GetString(10)
+                            common.checkData = True
+                        End While
+                    End Using
+                    GetData = 1
+                End Using
+            End Using
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+            GetData = 2
+        End Try
+    End Function
+
 #End Region
 
 #Region "エラーメッセージ"
@@ -69,17 +113,17 @@
     Function getErrorMsg(i As Integer) As String
 
         If i = 1 Then
-            getErrorMsg = "IDに記述がありません。"
+            getErrorMsg = "IDでエラーです。"
         ElseIf i = 2 Then
-            getErrorMsg = "Passに記述がありません。"
+            getErrorMsg = "Passでエラーです。"
         ElseIf i = 3 Then
-            getErrorMsg = "Pass(確認)に記述がありません。"
+            getErrorMsg = "Pass(確認)でエラーです。"
         ElseIf i = 4 Then
-            getErrorMsg = "パスワードが一致しません。"
+            getErrorMsg = "パスワードでエラーです。"
         ElseIf i = 5 Then
-            getErrorMsg = "氏名に記述がありません。"
+            getErrorMsg = "氏名でエラーです。"
         ElseIf i = 6 Then
-            getErrorMsg = "生年月日に記述がありません。"
+            getErrorMsg = "生年月日でエラーです。"
         ElseIf i = 7 Then
             getErrorMsg = "数字で入力してください"
         ElseIf i = 20 Then
@@ -87,6 +131,14 @@
             getErrorMsg = "データが存在しません"
         ElseIf i = 21 Then
             getErrorMsg = "SQLエラーです。"
+        ElseIf i = 22 Then
+            getErrorMsg = "SQLエラーです。データの追加に失敗しました。"
+        ElseIf i = 23 Then
+            getErrorMsg = "SQLエラーです。データの更新に失敗しました。"
+        ElseIf i = 24 Then
+            getErrorMsg = "SQLエラーです。データの消去に失敗しました。"
+        ElseIf i = 30 Then
+            getErrorMsg = "データが存在しているため作成できません。"
         Else
             getErrorMsg = ""
         End If

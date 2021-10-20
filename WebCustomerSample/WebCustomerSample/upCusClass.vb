@@ -62,10 +62,9 @@ Public Class upCusClass
 		Dim Sql As String
 		Sql = "update maCus set "
 		'パスワードを変更していない場合更新をしない。
-		If Not data.Rows(0)("Pass").ToString() = "" Then
-			Sql += $"Pass = {data.Rows(0)("Pass").ToString()}, "
+		If Not data.Rows(0)("PASS").ToString() = "" Then
+			Sql += $"PASS = '{data.Rows(0)("PASS").ToString()}', "
 		End If
-		Sql += $"PASS = '{data.Rows(0)("PASS").ToString()}', "
 		Sql += $"FULLNAME = '{data.Rows(0)("FULLNAME").ToString()}', "
 		Sql += $"SEX = '{data.Rows(0)("SEX").ToString()}', "
 		Sql += $"BDYEAR = {data.Rows(0)("BDYEAR").ToString()}, "
@@ -73,9 +72,8 @@ Public Class upCusClass
 		Sql += $"BDDAY = {data.Rows(0)("BDDAY").ToString()}, "
 		Sql += $"POSADDRESS = '{data.Rows(0)("POSADDRESS").ToString()}', "
 		Sql += $"ADDRESS1 = '{data.Rows(0)("ADDRESS1").ToString()}', "
-		Sql += $"ADDRESS2 = '{data.Rows(0)("ADDRESS2").ToString()}', "
-		Sql += "WHERE 1 = 1 "
-		Sql += $"And ID = '{data.Rows(0)("ID")}' "
+		Sql += $"ADDRESS2 = '{data.Rows(0)("ADDRESS2").ToString()}' "
+		Sql += $"WHERE ID = '{data.Rows(0)("ID")}' "
 
 		Try
 			Using Conn As New SqlConnection
@@ -86,7 +84,7 @@ Public Class upCusClass
 						Using cmd As New SqlCommand(Sql, Conn, transaction)
 
 							cmd.ExecuteNonQuery()
-
+							upDataSql = True
 							transaction.Commit()
 						End Using
 					Catch ex As Exception

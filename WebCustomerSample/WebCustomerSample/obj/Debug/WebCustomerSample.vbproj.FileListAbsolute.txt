@@ -124,6 +124,13 @@ C:\Users\81806\Desktop\仕事\WebCustomerSample\WebCustomerSample\obj\Debug\WebC
 C:\Users\81806\Desktop\仕事\WebCustomerSample\WebCustomerSample\obj\Debug\WebCustomerSample.dll
 C:\Users\81806\Desktop\仕事\WebCustomerSample\WebCustomerSample\obj\Debug\WebCustomerSample.xml
 C:\Users\81806\Desktop\仕事\WebCustomerSample\WebCustomerSample\obj\Debug\WebCustomerSample.pdb
+C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\obj\Debug\WebCustomerSample.vbproj.AssemblyReference.cache
+C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\obj\Debug\WebCustomerSample.Resources.resources
+C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\obj\Debug\WebCustomerSample.vbproj.GenerateResource.cache
+C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\obj\Debug\WebCustomerSample.vbproj.CoreCompileInputs.cache
+C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\obj\Debug\WebCustomerSample.dll
+C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\obj\Debug\WebCustomerSample.xml
+C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\obj\Debug\WebCustomerSample.pdb
 C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\bin\WebCustomerSample.dll.config
 C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\bin\WebCustomerSample.dll
 C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\bin\WebCustomerSample.pdb
@@ -179,11 +186,4 @@ C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\bin\roslyn\
 C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\obj\Debug\WebCustomerSample.vbproj.AssemblyReference.cache
-C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\obj\Debug\WebCustomerSample.Resources.resources
-C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\obj\Debug\WebCustomerSample.vbproj.GenerateResource.cache
-C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\obj\Debug\WebCustomerSample.vbproj.CoreCompileInputs.cache
 C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\obj\Debug\WebCustomerSample.vbproj.CopyComplete
-C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\obj\Debug\WebCustomerSample.dll
-C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\obj\Debug\WebCustomerSample.xml
-C:\Users\81806\sample\plusSample\WebCustomerSample\WebCustomerSample\obj\Debug\WebCustomerSample.pdb

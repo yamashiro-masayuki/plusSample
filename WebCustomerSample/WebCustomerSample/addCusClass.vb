@@ -3,6 +3,32 @@ Imports System.Data
 Public Class addCusClass
 	Inherits System.Web.UI.Page
 
+	'データが存在するかの確認
+	Function idCheckGetData(common As commonCusData, id As String) As Integer
+		Dim con As String = "Data Source=DESKTOP-CF5KSJ9;Initial Catalog=sampleDDB;Integrated Security=SSPI;"
+		Dim Sql As String = $"SELECT * FROM maCus where ID = '{id}' "
+
+		Try
+			Using Conn As New SqlConnection
+				Conn.ConnectionString = (con)
+				Conn.Open()
+				Using cmd As New SqlCommand(Sql)
+					cmd.Connection = Conn
+					cmd.CommandType = CommandType.Text
+					Using reader As SqlDataReader = cmd.ExecuteReader()
+						While (reader.Read())
+							common.checkData = True
+						End While
+					End Using
+					idCheckGetData = 1
+				End Using
+			End Using
+		Catch ex As Exception
+			Console.WriteLine(ex.Message)
+			idCheckGetData = 2
+		End Try
+	End Function
+
 	'dataColumの挿入
 	Function addDataTable(data As DataTable) As DataTable
 
@@ -20,7 +46,6 @@ Public Class addCusClass
 		addDataTable = data
 
 	End Function
-
 
 	'新しくデータを作成する
 	Function addData(data As DataTable) As Boolean
@@ -60,7 +85,7 @@ Public Class addCusClass
 						Using cmd As New SqlCommand(Sql, Conn, transaction)
 
 							cmd.ExecuteNonQuery()
-
+							addData = True
 							transaction.Commit()
 						End Using
 					Catch ex As Exception

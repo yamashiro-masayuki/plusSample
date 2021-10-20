@@ -105,6 +105,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="commonCusData.vb" />
+    <Compile Include="delCusClass.vb" />
     <Compile Include="LoginClass.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

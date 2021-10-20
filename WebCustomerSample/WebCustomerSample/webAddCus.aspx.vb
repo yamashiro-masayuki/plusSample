@@ -4,6 +4,7 @@ Public Class webAddCus
 
     Dim common As commonCusData
     Dim addClass As addCusClass
+    Dim dataError As Integer
 
     'ページの項目を全て初期状態にする。
     Sub Clear()
@@ -95,6 +96,23 @@ Public Class webAddCus
 
 #End Region
 
+        'すでに同じIDが存在するのかをチェック
+        common.checkData = False
+        dataError = addClass.idCheckGetData(common, txt_ID.Text)
+        'SQLエラーではなく、データが存在する場合
+        If common.checkData Then
+            common.focusError(txt_Pass, lbl_ErrorCheck, 30)
+            Return
+        End If
+        'SQLエラーの場合
+        If Not common.checkData Then
+            If dataError = 2 Then
+                'SQLエラー
+                common.focusError(txt_Pass, lbl_ErrorCheck, 21)
+                Return
+            End If
+        End If
+
         '登録のためのテーブル作り
         Dim data As New DataTable
         data = addClass.addDataTable(data)
@@ -116,7 +134,11 @@ Public Class webAddCus
 
 #End Region
         '登録する。
-        addClass.addData(data)
+        If Not addClass.addData(data) Then
+            common.focusError(txt_ID, lbl_ErrorCheck, 22)
+            Return
+        End If
+
         '初期化する。
         Clear()
 

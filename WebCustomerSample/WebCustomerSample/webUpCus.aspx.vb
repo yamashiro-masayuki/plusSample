@@ -13,6 +13,8 @@
         txt_Pass.Text = ""
         panelClear()
         txt_ID.Focus()
+        '更新ボタンを使用不可能にする。
+        btn_UpButton.Enabled = False
 
     End Sub
 
@@ -56,6 +58,8 @@
 
     Protected Sub btn_ViewButton_Click(sender As Object, e As EventArgs) Handles btn_ViewButton.Click
 
+        '更新ボタンを使用不可能にする。
+        btn_UpButton.Enabled = False
         '項目に記述があるかを判断する。
         'ID項目確認
         If common.objErrorCheck(txt_ID) Then
@@ -72,7 +76,7 @@
         panelClear()
 
         'データの確認(Trueで帰ってきたらデータない為、処理の中止)
-        dataError = upClass.upGetData(common, txt_ID.Text, txt_Pass.Text)
+        dataError = common.GetData(common, txt_ID.Text, txt_Pass.Text)
         If Not common.checkData Then
 
             If dataError = 1 Then
@@ -87,6 +91,8 @@
 
         End If
 
+        '更新ボタンを使用可能にする。
+        btn_UpButton.Enabled = True
         'データがとって来れた時に項目に挿入
         txt_Name.Text = common.fullName
         ddl_Sex.Text = common.sex
@@ -96,7 +102,6 @@
         txt_PosAddres.Text = common.posAdress
         txt_Address1.Text = common.address1
         txt_Address2.Text = common.address2
-
 
 
     End Sub
@@ -112,6 +117,66 @@
     '更新ボタンを押したときにデータを更新する。
     Protected Sub btn_UpButton_Click(sender As Object, e As EventArgs) Handles btn_UpButton.Click
 
+        '項目に記述があるかを判断する。
+        '氏名項目確認
+        If common.objErrorCheck(txt_Name) Then
+            common.focusError(txt_Name, lbl_ErrorCheck, 5)
+            Return
+        End If
+        '生年月日項目確認
+        If common.objErrorCheck(txt_BYear) Then
+            common.focusError(txt_BYear, lbl_ErrorCheck, 6)
+            Return
+        End If
+        If common.objErrorCheck(txt_BMonth) Then
+            common.focusError(txt_BMonth, lbl_ErrorCheck, 6)
+            Return
+        End If
+        If common.objErrorCheck(txt_BDay) Then
+            common.focusError(txt_BDay, lbl_ErrorCheck, 6)
+            Return
+        End If
+
+        'パスワードチェックをする場合
+        If chb_PassCheck.Checked Then
+            '新規パスとパス(確認)を行う
+            If Not txt_ChangePass.Text = txt_changePassCheck.Text Then
+                common.focusError(txt_ChangePass, lbl_ErrorCheck, 3)
+                Return
+            End If
+        End If
+
+        'データ更新のためにテーブルに入れる。
+        '登録のためのテーブル作り
+        Dim data As New DataTable
+        data = upClass.upDataTable(data)
+#Region "テーブルに値を入れる"
+
+        Dim dtRow = data.NewRow
+        dtRow("ID") = txt_ID.Text
+        dtRow("PASS") = ""
+        'チェックついている時だけデータを入れる
+        If chb_PassCheck.Checked Then
+            dtRow("PASS") = txt_ChangePass.Text
+        End If
+        dtRow("FULLNAME") = txt_Name.Text
+        dtRow("SEX") = ddl_Sex.Text
+        dtRow("BDYEAR") = txt_BYear.Text
+        dtRow("BDMONTH") = txt_BMonth.Text
+        dtRow("BDDAY") = txt_BDay.Text
+        dtRow("POSADDRESS") = txt_PosAddres.Text
+        dtRow("ADDRESS1") = txt_Address1.Text
+        dtRow("ADDRESS2") = txt_Address2.Text
+        data.Rows.Add(dtRow)
+
+#End Region
+        '更新する。
+        If Not upClass.upDataSql(data) Then
+            common.focusError(txt_Name, lbl_ErrorCheck, 23)
+            Return
+        End If
+        '初期化する。
+        Clear()
 
 
     End Sub
