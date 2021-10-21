@@ -122,13 +122,13 @@ Partial Public Class webSerchView
     Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''txt_BDMonth0 コントロール。
+    '''txt_BDMonth コントロール。
     '''</summary>
     '''<remarks>
     '''自動生成されたフィールド。
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
-    Protected WithEvents txt_BDMonth0 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txt_BDMonth As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Label8 コントロール。

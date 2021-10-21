@@ -40,7 +40,53 @@ Public Class commonCusData
 
 #End Region
 
+#Region "ログイン確認共通変数"
 
+    'ログインできた場合の顧客ID
+    Public Shared loginCusID As String
+    Public Property LoginID() As String
+        Get
+            Return loginCusID
+        End Get
+        Set(ByVal value As String)
+            loginCusID = value
+        End Set
+    End Property
+
+    'ログインできた場合の顧客Pass
+    Public Shared loginCusPass As String
+    Public Property LoginPass() As String
+        Get
+            Return loginCusPass
+        End Get
+        Set(ByVal value As String)
+            loginCusPass = value
+        End Set
+    End Property
+
+    'ログインできた場合の顧客氏名
+    Public Shared loginCusName As String
+    Public Property LoginName() As String
+        Get
+            Return loginCusName
+        End Get
+        Set(ByVal value As String)
+            loginCusName = value
+        End Set
+    End Property
+
+    'デバックモードかの判断
+    Public Shared checkCusLogin As Boolean = False
+    Public Property CheckLogin() As Boolean
+        Get
+            Return checkCusLogin
+        End Get
+        Set(ByVal value As Boolean)
+            checkCusLogin = value
+        End Set
+    End Property
+
+#End Region
 
 #Region "共通で使用"
 

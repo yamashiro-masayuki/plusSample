@@ -1,5 +1,8 @@
 ﻿Public Class webMain
     Inherits System.Web.UI.Page
+
+    'クラス宣言
+    Dim common As commonCusData
     Dim fullName As String
 
 
@@ -9,7 +12,21 @@
 
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        lbl_LoginName.Text = $"{fullName}さんようこそ"
+
+        'クラスの宣言
+        common = New commonCusData()
+
+        '共通変数にログイン時の名前がなかったらエラーページに移行する。
+        If common.LoginName = "" And common.CheckLogin Then
+            'エラーページの表示
+            Response.Redirect("~/webNotAccess.aspx")
+        Else
+            'デバックモードの時はloginNameにデバックモードを挿入
+            common.LoginName = "デバックモード"
+        End If
+
+        lbl_LoginName.Text = $"{common.LoginName}さんようこそ"
+
     End Sub
 
     Protected Sub btn_AddCus_Click(sender As Object, e As EventArgs) Handles btn_AddCus.Click

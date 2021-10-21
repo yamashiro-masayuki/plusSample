@@ -12,6 +12,8 @@
         'クラスの宣言
         loginClass = New LoginClass()
         common = New commonCusData()
+        'デバックモードではないのでTrueに変更
+        common.CheckLogin = True
         'エラー表記を最初は隠す。
         lbl_checkError.Visible = False
         'エラー表記の色を赤にする。
@@ -38,6 +40,10 @@
             lbl_checkError.Text = common.getLoginErrorMsg(2)
             lbl_checkError.Visible = True
         Else
+            'ログインが出来た時共通変数に値を入れる。
+            common.LoginID = common.cusID
+            common.LoginPass = common.cusPass
+            common.LoginName = common.fullName
             'メイン画面の表示
             Response.Redirect("/webMain.aspx")
         End If

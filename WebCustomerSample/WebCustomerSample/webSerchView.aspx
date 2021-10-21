@@ -38,7 +38,7 @@
             <asp:Label ID="Label2" runat="server" Text="生年月日"></asp:Label>
             <asp:TextBox ID="txt_BDYear" runat="server" MaxLength="4" Width="43px"></asp:TextBox>
             <asp:Label ID="Label3" runat="server" Text="年"></asp:Label>
-            <asp:TextBox ID="txt_BDMonth0" runat="server" MaxLength="12" Width="21px"></asp:TextBox>
+            <asp:TextBox ID="txt_BDMonth" runat="server" MaxLength="12" Width="21px"></asp:TextBox>
             <asp:Label ID="Label8" runat="server" Text="月"></asp:Label>
             <asp:TextBox ID="txt_BDDay" runat="server" MaxLength="12" Width="21px"></asp:TextBox>
             <asp:Label ID="Label9" runat="server" Text="日"></asp:Label>

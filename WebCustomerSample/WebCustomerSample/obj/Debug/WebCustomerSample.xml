@@ -712,6 +712,33 @@ btn_SerchCus コントロール。
 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
 </remarks>
 </member>
+<member name="F:WebCustomerSample.webNotAccess._form1">
+<summary>
+form1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebCustomerSample.webNotAccess._Label1">
+<summary>
+Label1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebCustomerSample.webNotAccess._btn_Login">
+<summary>
+btn_Login コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
 <member name="F:WebCustomerSample.webSerchView._form1">
 <summary>
 form1 コントロール。
@@ -820,9 +847,9 @@ Label3 コントロール。
 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
 </remarks>
 </member>
-<member name="F:WebCustomerSample.webSerchView._txt_BDMonth0">
+<member name="F:WebCustomerSample.webSerchView._txt_BDMonth">
 <summary>
-txt_BDMonth0 コントロール。
+txt_BDMonth コントロール。
 </summary>
 <remarks>
 自動生成されたフィールド。

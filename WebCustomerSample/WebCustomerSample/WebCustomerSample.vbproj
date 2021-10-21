@@ -97,6 +97,7 @@
     <Content Include="webDelCus.aspx" />
     <Content Include="webLogin.aspx" />
     <Content Include="webMain.aspx" />
+    <Content Include="webNotAccess.aspx" />
     <Content Include="webSerchView.aspx" />
     <Content Include="webUpCus.aspx" />
   </ItemGroup>
@@ -128,6 +129,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="serchViewClass.vb" />
     <Compile Include="upCusClass.vb" />
     <Compile Include="webAddCus.aspx.designer.vb">
       <DependentUpon>webAddCus.aspx</DependentUpon>
@@ -155,6 +157,13 @@
     </Compile>
     <Compile Include="webMain.aspx.vb">
       <DependentUpon>webMain.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="webNotAccess.aspx.designer.vb">
+      <DependentUpon>webNotAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="webNotAccess.aspx.vb">
+      <DependentUpon>webNotAccess.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="webSerchView.aspx.designer.vb">
