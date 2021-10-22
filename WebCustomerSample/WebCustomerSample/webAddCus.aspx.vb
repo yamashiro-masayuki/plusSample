@@ -35,6 +35,7 @@ Public Class webAddCus
         'クラスの宣言
         common = New commonCusData()
         addClass = New addCusClass()
+
         '画面上の文字必須項目の文字色変更
         lbl_ID.ForeColor = System.Drawing.Color.Blue
         lbl_Pass.ForeColor = System.Drawing.Color.Blue

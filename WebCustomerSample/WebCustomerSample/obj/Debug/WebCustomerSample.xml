@@ -892,6 +892,15 @@ btn_Clear コントロール。
 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
 </remarks>
 </member>
+<member name="F:WebCustomerSample.webSerchView._lbl_ErrorCheck">
+<summary>
+lbl_ErrorCheck コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
 <member name="F:WebCustomerSample.webSerchView._btn_View">
 <summary>
 btn_View コントロール。

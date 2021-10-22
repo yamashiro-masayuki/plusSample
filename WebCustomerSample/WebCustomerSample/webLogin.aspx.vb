@@ -5,7 +5,6 @@
     'クラス宣言
     Dim loginClass As LoginClass
     Dim common As commonCusData
-    Dim main As webMain
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 

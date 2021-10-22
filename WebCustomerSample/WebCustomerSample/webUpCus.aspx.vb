@@ -41,6 +41,13 @@
         'クラスの宣言
         common = New commonCusData()
         upClass = New upCusClass()
+
+        '共通変数にログイン時の名前がなかったらエラーページに移行する。
+        If common.LoginName = "" And common.CheckLogin Then
+            'エラーページの表示
+            Response.Redirect("~/webNotAccess.aspx")
+        End If
+
         '画面上の文字必須項目の文字色変更
         lbl_Name.ForeColor = System.Drawing.Color.Blue
         lbl_Sex.ForeColor = System.Drawing.Color.Blue

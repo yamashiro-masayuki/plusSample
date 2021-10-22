@@ -3,13 +3,6 @@
 
     'クラス宣言
     Dim common As commonCusData
-    Dim fullName As String
-
-
-    Sub New()
-        fullName = "デバックモード"
-    End Sub
-
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
@@ -20,12 +13,13 @@
         If common.LoginName = "" And common.CheckLogin Then
             'エラーページの表示
             Response.Redirect("~/webNotAccess.aspx")
+        ElseIf Not common.LoginName = "" And common.CheckLogin Then
+            'ログインしてきた人はそのまま名前を入れる。
+            lbl_LoginName.Text = $"{common.LoginName}さんようこそ"
         Else
             'デバックモードの時はloginNameにデバックモードを挿入
-            common.LoginName = "デバックモード"
+            lbl_LoginName.Text = $"デバックモードさんようこそ"
         End If
-
-        lbl_LoginName.Text = $"{common.LoginName}さんようこそ"
 
     End Sub
 

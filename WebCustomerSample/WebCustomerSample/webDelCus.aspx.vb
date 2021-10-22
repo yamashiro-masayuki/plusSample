@@ -39,6 +39,13 @@
         'クラスの宣言
         Common = New commonCusData()
         delClass = New delCusClass()
+
+        '共通変数にログイン時の名前がなかったらエラーページに移行する。
+        If common.LoginName = "" And common.CheckLogin Then
+            'エラーページの表示
+            Response.Redirect("~/webNotAccess.aspx")
+        End If
+
         'エラーは赤文字に変更し初期は表示なし
         lbl_ErrorCheck.ForeColor = System.Drawing.Color.Red
         lbl_ErrorCheck.Visible = False

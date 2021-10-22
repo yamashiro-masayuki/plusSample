@@ -52,14 +52,17 @@
             <br />
             <br />
             <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="lbl_ErrorCheck" runat="server" Text="エラーチェック"></asp:Label>
             <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
             <br />
             <br />
             <br />
         </asp:Panel>
-        　　　　　　　※何も書かれていない項目は検索条件には含まれません。<br />
-       　　　　　　　　　　　　　　　　　　　　　　　　　　　<asp:Button ID="btn_View" runat="server" Height="30px" Text="表示" Width="80px" />
+        　　　　　※何も書かれていない項目は検索条件には含まれません。<br />
+       　　　　　　　　　　　　　　　　　　　　　　　　　<asp:Button ID="btn_View" runat="server" Height="30px" Text="表示" Width="80px" />
         <br />
         <br />
         <asp:Panel ID="pnl_RBtn" runat="server" BorderStyle="Solid" Height="22px" Width="141px">
