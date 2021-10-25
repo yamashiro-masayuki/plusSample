@@ -4,6 +4,7 @@
     Dim common As commonCusData
     Dim serchViewClass As serchViewClass
     Dim dataError As Integer
+    Dim data As New DataTable
 
     'ページの項目を全て初期状態にする。
     Sub Clear()
@@ -40,6 +41,10 @@
         lbl_ErrorCheck.ForeColor = System.Drawing.Color.Red
         lbl_ErrorCheck.Visible = False
         'GridViewを表示する。
+        Me.gv_CusInfo.ShowHeaderWhenEmpty = True
+        '登録のためのテーブル作り
+        data = serchViewClass.viewDataTable(data)
+        gv_CusInfo.DataSource = data
         gv_CusInfo.DataBind()
         '最初は更新を行うページを表示するラジオボタンにする。
         RBtn_Up.Checked = True
@@ -56,20 +61,16 @@
     'データの表示を行う。
     Protected Sub btn_View_Click(sender As Object, e As EventArgs) Handles btn_View.Click
 
-        '登録のためのテーブル作り
-        Dim data As New DataTable
-        data = serchViewClass.viewDataTable(data)
-
         'データの取得
-        DataError = serchViewClass.GetData(common, data, txt_ID.Text, txt_Name.Text, txt_BDYear.Text, txt_BDMonth.Text, txt_BDDay.Text, ddl_Sex.Text)
+        dataError = serchViewClass.GetData(common, data, txt_ID.Text, txt_Name.Text, txt_BDYear.Text, txt_BDMonth.Text, txt_BDDay.Text, ddl_Sex.Text)
 
         If Not common.checkData Then
 
-            If DataError = 1 Then
+            If dataError = 1 Then
                 'データ件数が0件
                 common.focusError(txt_ID, lbl_ErrorCheck, 20)
                 Return
-            ElseIf DataError = 2 Then
+            ElseIf dataError = 2 Then
                 'SQLエラー
                 common.focusError(txt_ID, lbl_ErrorCheck, 21)
                 Return
@@ -77,17 +78,24 @@
 
         End If
 
-
         'グリッドビューに表示
         gv_CusInfo.DataSource = data
         gv_CusInfo.DataBind()
-        'gv_CusInfo.Rows(0)("ID") = data.Rows(0)("ID").ToString()
-
-
-
-
 
 
     End Sub
+
+
+    Protected Sub gv_CusInfo_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles gv_CusInfo.RowCommand
+
+        'RadioButtonの選択されたページの表示
+        If e.CommandName = "view" Then
+
+
+
+        End If
+
+    End Sub
+
 
 End Class

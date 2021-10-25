@@ -167,15 +167,6 @@ Partial Public Class webSerchView
     Protected WithEvents btn_Clear As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''lbl_ErrorCheck コントロール。
-    '''</summary>
-    '''<remarks>
-    '''自動生成されたフィールド。
-    '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
-    '''</remarks>
-    Protected WithEvents lbl_ErrorCheck As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
     '''btn_View コントロール。
     '''</summary>
     '''<remarks>
@@ -219,4 +210,13 @@ Partial Public Class webSerchView
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
     Protected WithEvents gv_CusInfo As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''lbl_ErrorCheck コントロール。
+    '''</summary>
+    '''<remarks>
+    '''自動生成されたフィールド。
+    '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+    '''</remarks>
+    Protected WithEvents lbl_ErrorCheck As Global.System.Web.UI.WebControls.Label
 End Class

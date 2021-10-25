@@ -5,7 +5,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>
+        <style type="text/css">
+            thead, tbody 
+            {
+                display: block;
+            }
+            tbody 
+            {
+                overflow-x: hidden;
+                overflow-y: scroll;
+                height: 100px;
+            }
+            .FreezingDivid
+            {
+                overflow: auto;
+                width: 800px;
+                height: 600px;
+            }
+        </style>
+    </title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -53,7 +72,13 @@
             <br />
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="lbl_ErrorCheck" runat="server" Text="エラーチェック"></asp:Label>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
@@ -69,28 +94,14 @@
             <asp:RadioButton ID="RBtn_Up" runat="server" Text="更新" />
             　<asp:RadioButton ID="RBtn_Del" runat="server" Text="消去" />
         </asp:Panel>
+        <br />
         ※ダブルクリックした際左のチェックされているページが表示<br />
-        <asp:GridView ID="gv_CusInfo" runat="server" AutoGenerateColumns="False" Width="511px">
+        <asp:GridView ID="gv_CusInfo" runat="server" Width="486px" CssClass="Freezing">
             <Columns>
-                <asp:BoundField AccessibleHeaderText="ID" FooterText="ID" HeaderText="ID">
-                <ItemStyle Width="120px" />
-                </asp:BoundField>
-                <asp:BoundField HeaderText="氏名">
-                <ItemStyle Width="120px" />
-                </asp:BoundField>
-                <asp:BoundField HeaderText="性別">
-                <ItemStyle Width="70px" />
-                </asp:BoundField>
-                <asp:BoundField HeaderText="生年月日">
-                <ItemStyle Width="120px" />
-                </asp:BoundField>
+                <asp:ButtonField ButtonType="Button" CommandName="view" Text="表示" />
             </Columns>
         </asp:GridView>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        &nbsp;<asp:Label ID="lbl_ErrorCheck" runat="server" Text="エラーチェック"></asp:Label>
         <br />
         <br />
         <br />
@@ -109,4 +120,6 @@
     <p>
         &nbsp;</p>
 </body>
+    
+
 </html>

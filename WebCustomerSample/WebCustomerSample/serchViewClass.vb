@@ -6,12 +6,11 @@ Public Class serchViewClass
 	Function viewDataTable(data As DataTable) As DataTable
 
 		data.Columns.Add("ID")
-		data.Columns.Add("PASS")
-		data.Columns.Add("FULLNAME")
-		data.Columns.Add("SEX")
-		data.Columns.Add("BDYEAR")
-		data.Columns.Add("BDMONTH")
-		data.Columns.Add("BDDAY")
+		data.Columns.Add("氏名")
+		data.Columns.Add("性別")
+		data.Columns.Add("誕生年")
+		data.Columns.Add("誕生月")
+		data.Columns.Add("誕生日")
 
 		viewDataTable = data
 
@@ -22,7 +21,13 @@ Public Class serchViewClass
 		Dim i As Integer = 0
 
 		Dim con As String = "Data Source=DESKTOP-CF5KSJ9;Initial Catalog=sampleDDB;Integrated Security=SSPI;"
-		Dim Sql As String = $"SELECT * FROM maCus  "
+		Dim Sql As String = $"SELECT ID, "
+		Sql += $"FULLNAME As '氏名', "
+		Sql += $"SEX As '性別', "
+		Sql += $"BDYEAR As '誕生年', "
+		Sql += $"BDMONTH As '誕生月', "
+		Sql += $"BDDAY As '誕生日' "
+		Sql += $"FROM maCus "
 		Sql += $"where 1 = 1 "
 		If Not id = "" Then
 			Sql += $"And ID like '%{id}%' "
@@ -53,12 +58,12 @@ Public Class serchViewClass
 					Using reader As SqlDataReader = cmd.ExecuteReader()
 						While (reader.Read())
 							data.Rows.Add()
-							data.Rows(i)("ID") = reader.GetString(1)
-							data.Rows(i)("FULLNAME") = reader.GetString(3)
-							data.Rows(i)("SEX") = reader.GetString(4)
-							data.Rows(i)("BDYEAR") = reader.GetInt32(5)
-							data.Rows(i)("BDMONTH") = reader.GetInt32(6)
-							data.Rows(i)("BDDAY") = reader.GetInt32(7)
+							data.Rows(i)("ID") = reader.GetString(0)
+							data.Rows(i)("氏名") = reader.GetString(1)
+							data.Rows(i)("性別") = reader.GetString(2)
+							data.Rows(i)("誕生年") = reader.GetInt32(3)
+							data.Rows(i)("誕生月") = reader.GetInt32(4)
+							data.Rows(i)("誕生日") = reader.GetInt32(5)
 							common.checkData = True
 							i += 1
 						End While
