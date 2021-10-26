@@ -2,6 +2,7 @@
 Imports System.Data
 Public Class LoginClass
 	Inherits System.Web.UI.Page
+	Public finCheck As Boolean
 
 	'ログイン時にそのIDとPassが一致するものがあるかを判断するSQL
 	Sub loginIDPassCheck(common As commonCusData, id As String, pass As String)
@@ -21,6 +22,7 @@ Public Class LoginClass
 							common.cusPass = reader.GetString(2)
 							common.fullName = reader.GetString(3)
 							Session("fullName") = reader.GetString(3)
+							finCheck = True
 						End While
 					End Using
 				End Using
@@ -29,17 +31,6 @@ Public Class LoginClass
 			Console.WriteLine(ex.Message)
 		End Try
 	End Sub
-
-
-	'Function Index() As ActionResult
-	'	Dim actionform As New commonCusData
-
-	'	actionform.SessionId = Session.SessionID
-	'	actionform.CookieMode = Session.CookieMode
-	'	actionform.IsCookieless = Session.IsCookieless
-	'	actionform.str1 = Session("message1")
-	'	Return View("view1", actionform)
-	'End Function
 
 
 

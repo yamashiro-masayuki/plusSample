@@ -46,8 +46,6 @@
         data = serchViewClass.viewDataTable(data)
         gv_CusInfo.DataSource = data
         gv_CusInfo.DataBind()
-        '最初は更新を行うページを表示するラジオボタンにする。
-        RBtn_Up.Checked = True
 
     End Sub
 
@@ -85,17 +83,18 @@
 
     End Sub
 
+    '選択されたデータの選択ページを表示する。
+    Protected Sub btn_ViewPage_Click(sender As Object, e As EventArgs) Handles btn_ViewPage.Click
 
-    Protected Sub gv_CusInfo_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles gv_CusInfo.RowCommand
-
-        'RadioButtonの選択されたページの表示
-        If e.CommandName = "view" Then
-
-
-
+        '更新にボタンがついている場合
+        If RBL_UpDele.SelectedIndex = 0 Then
+            '更新ページの表示
+            Response.Redirect("~/webUpCus.aspx")
+        Else
+            '消去ページの表示
+            Response.Redirect("~/webDelCus.aspx")
         End If
 
     End Sub
-
 
 End Class

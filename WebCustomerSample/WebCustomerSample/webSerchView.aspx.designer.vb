@@ -176,31 +176,22 @@ Partial Public Class webSerchView
     Protected WithEvents btn_View As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''pnl_RBtn コントロール。
+    '''RBL_UpDele コントロール。
     '''</summary>
     '''<remarks>
     '''自動生成されたフィールド。
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
-    Protected WithEvents pnl_RBtn As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents RBL_UpDele As Global.System.Web.UI.WebControls.RadioButtonList
 
     '''<summary>
-    '''RBtn_Up コントロール。
+    '''btn_ViewPage コントロール。
     '''</summary>
     '''<remarks>
     '''自動生成されたフィールド。
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
-    Protected WithEvents RBtn_Up As Global.System.Web.UI.WebControls.RadioButton
-
-    '''<summary>
-    '''RBtn_Del コントロール。
-    '''</summary>
-    '''<remarks>
-    '''自動生成されたフィールド。
-    '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
-    '''</remarks>
-    Protected WithEvents RBtn_Del As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents btn_ViewPage As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''gv_CusInfo コントロール。

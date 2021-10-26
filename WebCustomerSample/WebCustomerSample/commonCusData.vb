@@ -38,6 +38,10 @@ Public Class commonCusData
     'データ取れたかの判断
     Public Property checkData As Boolean
 
+    '表示画面から別画面開く際の変数
+    'ID
+    Public Property viewID As String
+
 #End Region
 
 #Region "ログイン確認共通変数"

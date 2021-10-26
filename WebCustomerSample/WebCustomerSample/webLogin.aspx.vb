@@ -34,9 +34,13 @@
         'IDとパスワードのチェック
         Call loginClass.loginIDPassCheck(common, txt_ID.Text, txt_Pass.Text)
         'データをとってこれた時名前が入っていたら画面を表示する。
-        If common.fullName = "" Then
+        If common.fullName = "" And loginClass.finCheck Then
             '検索にヒットしないエラーの記述。
             lbl_checkError.Text = common.getLoginErrorMsg(2)
+            lbl_checkError.Visible = True
+        ElseIf common.fullName = "" And loginClass.finCheck = False Then
+            'SQLエラー
+            lbl_checkError.Text = common.getErrorMsg(21)
             lbl_checkError.Visible = True
         Else
             'ログインが出来た時共通変数に値を入れる。
