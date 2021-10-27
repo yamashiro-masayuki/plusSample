@@ -40,14 +40,14 @@
             <br />
             　&nbsp;&nbsp;
             <asp:Label ID="Label1" runat="server" Text="ID"></asp:Label>
-            <asp:TextBox ID="txt_ID" runat="server" MaxLength="10" Width="90px"></asp:TextBox>
+            <asp:TextBox ID="txt_ID" runat="server" MaxLength="6" Width="90px"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label6" runat="server" Text="性別"></asp:Label>
             <asp:DropDownList ID="ddl_Sex" runat="server">
                 <asp:ListItem></asp:ListItem>
-                <asp:ListItem Value="man">男性</asp:ListItem>
-                <asp:ListItem Value="woman">女性</asp:ListItem>
-                <asp:ListItem Value="other">その他</asp:ListItem>
+                <asp:ListItem Value="男性">男性</asp:ListItem>
+                <asp:ListItem Value="女性">女性</asp:ListItem>
+                <asp:ListItem Value="その他">その他</asp:ListItem>
             </asp:DropDownList>
             <br />
             &nbsp;&nbsp;
@@ -57,9 +57,9 @@
             <asp:Label ID="Label2" runat="server" Text="生年月日"></asp:Label>
             <asp:TextBox ID="txt_BDYear" runat="server" MaxLength="4" Width="43px"></asp:TextBox>
             <asp:Label ID="Label3" runat="server" Text="年"></asp:Label>
-            <asp:TextBox ID="txt_BDMonth" runat="server" MaxLength="12" Width="21px"></asp:TextBox>
+            <asp:TextBox ID="txt_BDMonth" runat="server" MaxLength="2" Width="21px"></asp:TextBox>
             <asp:Label ID="Label8" runat="server" Text="月"></asp:Label>
-            <asp:TextBox ID="txt_BDDay" runat="server" MaxLength="12" Width="21px"></asp:TextBox>
+            <asp:TextBox ID="txt_BDDay" runat="server" MaxLength="2" Width="21px"></asp:TextBox>
             <asp:Label ID="Label9" runat="server" Text="日"></asp:Label>
             <br />
             <br />

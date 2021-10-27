@@ -60,7 +60,7 @@
     Protected Sub btn_View_Click(sender As Object, e As EventArgs) Handles btn_View.Click
 
         'データの取得
-        dataError = serchViewClass.GetData(common, data, txt_ID.Text, txt_Name.Text, txt_BDYear.Text, txt_BDMonth.Text, txt_BDDay.Text, ddl_Sex.Text)
+        dataError = serchViewClass.GetData(common, data, txt_ID.Text, txt_Name.Text, ddl_Sex.Text, txt_BDYear.Text, txt_BDMonth.Text, txt_BDDay.Text)
 
         If Not common.checkData Then
 
